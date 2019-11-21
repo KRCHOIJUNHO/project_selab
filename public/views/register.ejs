@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" rel="text/css" href="../resources/css/loginstyle.css">
+        <title>Register page</title>
+    </head>
+    <body>
+        <header>
+            <div class="register-wrap">
+                <form action="/register" , method="POST" onsubmit="return pwdconfCheck()">
+                    <h3>Register</h3>
+                    <div>
+                        <p>UserName</p>
+                        <input type="text" class="input" name="user_name" required>
+                    </div>
+                    <div>
+                        <p>Student ID</p>
+                        <input type="text" class="input" name="studentid" required>
+                    </div>
+                    <div>
+                        <p>ID</p>
+                        <input type="email" class="input" name="user_id" required>
+                    </div>
+                    <div>
+                        <p>Password</p>
+                        <input type="password" class="input" name="user_password" required>
+                    </div>
+                    <div>
+                        <p>Password Confirm</p>
+                        <input type="password" class="input" name="pwdconf" required>
+                    </div>
+                    <input class="button login" type="submit" value="Register">
+                </form>
+                <a href="/login"><button class="button back">Back</button></a>
+            </div>
+            <% if(alert == true){ %>
+                <script text ="type/javascript">
+                    alert('already exist');
+                </script>
+           <% } %>
+        </header>
+        <script type="text/javascript">
+            function pwdconfCheck(){
+                var pwd = document.getElementsByName('user_password')[0];
+                var pwdconf = document.getElementsByName('pwdconf')[0];
+                if(pwd.value != pwdconf.value){
+                    alert("Please dobule check password confirm");
+                    return false;
+                } else{
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>

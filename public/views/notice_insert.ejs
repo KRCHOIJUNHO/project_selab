@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" rel="text/css" href="../resources/css/style.css">
+        <title>login sheet</title>
+    </head>
+    <body>
+        <nav>
+            <h1 class="logo"><a href="/">LAB(<span class="color">SE</span>);</a></h1>
+            <div>
+                <a href="/notice">notice</a>
+                <a href="/members">members</a>
+                <a href="/research">research</a>
+                <a href="#">publications</a>
+                <a href="#">courses</a>
+                <a class="login"><%= user_name %> 님</a> 
+            </div>
+        </nav>
+        <section class="notice_insert">
+            <form action="/notice_insert" method="post">
+                <input type="text" name="title" placeholder="Title">
+                <textarea name="content" placeholder="Write content"></textarea>
+                <input type="file" name="profile">
+                <input type="submit" value="Submit">
+            </form>    
+        </section>     
+    </body>
+</html>

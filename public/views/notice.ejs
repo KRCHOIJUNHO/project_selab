@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" rel="text/css" href="../resources/css/style.css">
+        <title>notice</title>
+    </head>
+    <body>
+        <nav>
+            <h1 class="logo"><a href="/">LAB(<span class="color">SE</span>);</a></h1>
+            <div>
+                <a href="/notice">notice</a>
+                <a href="/members">members</a>
+                <a href="/research">research</a>
+                <a href="#">publications</a>
+                <a href="#">courses</a>
+                <% if(logined) { %>
+                    <a class="login"><%= user_name %> 님</a>
+                <% } else { %>
+                    <a href="login" class="login">login</a>
+                <% } %>   
+            </div>
+        </nav>
+        <section class="notice">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%  results.reverse().forEach(function(row){
+                        var date = JSON.stringify(row.date);
+                        date = date.substring(1,11).split("-");
+                    %>
+                    <tr>
+                        <td><%= row.notice_id %></td>
+                        <td><a href="notice/<%= row.notice_id %>"><%= row.title %></a></td>
+                        <td><%= row.writer_name %></td>
+                        <td><%= `${date[0]}/${date[1]}/${date[2]}` %></td>
+                        <td><%= row.view %></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+            <a href="notice_insert"><button>글쓰기</button></a>
+        </section>    
+    </body>
+</html>

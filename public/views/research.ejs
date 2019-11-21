@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <link rel="stylesheet" rel="text/css" href="../resources/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <h1 class="logo"><a href="/">LAB(<span class="color">SE</span>);</a></h1>
+            <div>
+                <a href="/notice">notice</a>
+                <a href="/members">members</a>
+                <a href="/research">research</a>
+                <a href="#">publications</a>
+                <a href="#">courses</a>
+                <% if(logined) { %>
+                    <a class="login"><%= user_name %> 님</a>
+                <% } else { %>
+                    <a href="login" class="login">login</a>
+                <% } %>   
+            </div>
+        </nav>
+        <section>
+            <article class="research">
+                <h3>Web & Web security</h3>
+                <img src="../resources/img/research1.jpg">
+                <ul>
+                    <li>Semantic web</li>
+                    <li>Effective Access Control for Web Data</li>
+                    <li>Vulnerability Analysis and Detection for HTML5</li>
+                    <li>JavaScript and Hybrid Application</li>
+                </ul>
+            </article>
+            <article class="research">
+                <h3>Formal Engineering Methods</h3>
+                <img src="../resources/img/research1.jpg">
+                <ul>
+                    <li>Formal Engineering Methods</li>
+                    <li>Formal Specification, Validation, and Verification</li>
+                    <li>Model checking, Theorem Proving</li>
+                    <li>Ontology Reasoning, Constraint Solving</li>
+                </ul>
+            </article>
+            <article class="research">
+                <h3>Requirement Engineering</h3>
+                <img src="../resources/img/research1.jpg">
+                <ul>
+                    <li>Requirement Analysis, Validation and Conflict Detection</li>
+                    <li>Non-Functional Requirements Analysis and Prediction</li>
+                    <li>Product Line and Software Product Line</li>
+                    <li>Requirement Modeling with Extended Mind Map</li>
+                </ul>
+            </article>
+            <article class="research">
+                <h3>Real-Time Software Engineering</h3>
+                <img src="../resources/img/research1.jpg">
+                <ul>
+                    <li>Real-Time Software and Process Modeling</li>
+                    <li>Real-Time Software Specification and Verification</li>
+                    <li>Real-Time Software Integration and Migration Control</li>
+                </ul>
+            </article>
+            <article class="research">
+                <h3>Semi-structured<br> Data</h3>
+                <img src="../resources/img/research1.jpg">
+                <ul>
+                    <li>XML and XML DB, Visualization of XML-Schema</li>
+                    <li>Ontology and RDF Store</li>
+                    <li>Semistructured Data Integration and Migration</li>
+                    <li>Optimization of X-Query</li>
+                    <li>Consistency Verification for Semistructured Data Manipulation</li>
+                    <li>Domain Specific Extension to XML & Data Translation from RDBMS to XML DBMS</li>
+                </ul>
+            </article>
+        </section>
+        <footer>
+            <div class="row">
+                <div>Wi Jun Bum, Bae Jin Woo, Park Jae Sun, Park Sung Su, Choi Jun Ho</div>
+                <div>@Copyright Hanyang University</div>
+                <div>SeLab Web Application Class</div>
+            </div>
+        </footer>
+    </body>
+</html>

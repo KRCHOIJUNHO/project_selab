@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <link rel="stylesheet" rel="text/css" href="../resources/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <h1 class="logo"><a href="/">LAB(<span class="color">SE</span>);</a></h1>
+            <div>
+                <a href="/notice">notice</a>
+                <a href="/members">members</a>
+                <a href="/research">research</a>
+                <a href="#">publications</a>
+                <a href="#">courses</a>
+                <a href="/score">score</a>
+                <% if(logined) { %>
+                    <a class="login"><%= user_name %> 님</a>
+                <% } else { %>
+                    <a href="login" class="login">login</a>
+                <% } %>            
+            </div>
+        </nav>
+        <header>
+            <div class="background">
+                <div class="row header1 none">
+                    <h2>LAB(SE);</h2>
+                    <p class="long-copy">welcome to<br>Software Engineering<br>Laboratory<br>within the CSE Dept.<br><br><strong>@HYU(ERICA)</strong><br>led by asst. prof. <strong>Scott lee</strong></p>
+                    <p class="copy">software engineering lab.</p>
+                    <p class="copy">where Great Software Enginners are made.</p>
+                </div>
+
+                <div class="row header2">
+                    <h2>Web & Web Security</h2>
+                    <ul>
+                        <li>- Semantic Web</li>
+                        <li>- JS & Hybrid Apps</li>
+                        <li>- Access Control for Web Data</li>
+                        <li>- Vulnerability Analysis & Detection for HTML5</li>
+                    </ul>
+                </div>
+
+                <div class="row header3 none">
+                    <h2>The Real-Time <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="color">S</span>oftware <span class="color">E</span>ngineering</h2>
+                </div> 
+            </div>
+        </header>
+        <footer>
+            <div class="row">
+                <div>Wi Jun Bum, Bae Jin Woo, Park Jae Sun, Park Sung Su, Choi Jun Ho</div>
+                <div>@Copyright Hanyang University</div>
+                <div>SeLab Web Application Class</div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="../resources/js/headerText.js"></script>
+    </body>
+</html>

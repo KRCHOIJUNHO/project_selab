@@ -1,0 +1,529 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-family: 'Open+sans';
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    background-color: #f2f2f2; 
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.color{
+    color:yellow;
+}
+
+.none {
+    display: none;
+}
+
+input:focus,
+textarea:focus,
+button:focus{
+    outline:none;
+}
+
+/*--------------------- Header ----------------------------*/
+
+header{
+    color:#fff;
+    width: 100%;
+    height : 100vh;
+    background-position: center;
+    background-size:cover;
+    animation: change-images 21s ease infinite;
+}
+
+.background {
+    width: 100%;
+    height : 100vh;
+    background: rgba(0,0,0,0.25); 
+}
+
+/* header1 */
+.header1 {
+    animation: change-text 7s ease-in-out infinite;
+}
+
+.header1 h2 {
+    display: inline-block;
+    font-size: 150px;
+    margin-top: 250px;
+}
+
+.long-copy {
+    float:right;
+    margin-top: 200px;
+    font-size: 30px;
+    line-height: 1.5em;
+}
+
+.copy {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+/* header2 */
+.header2 {
+    padding-left: 50px; 
+    animation: change-text 7s ease-in-out infinite;
+}
+
+.header2 h2 {
+    display: inline-block;
+    font-size : 100px;
+    margin-top: 150px;
+}
+
+.header2 ul{
+    margin-top : 100px;
+}
+
+.header2 ul li{
+    line-height: 1.75em;
+    font-weight: 300;
+    font-size : 25px;
+}
+
+/* header3 */
+.header3 {
+     animation: change-text 7s ease-in-out infinite;
+}
+
+.header3 h2{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-size: 50px;
+}
+
+/*--------------------- nav -------------------------------*/
+
+.logo {
+    float:left;
+    margin-top:30px;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.logo a {
+    color: #fff;
+}
+
+.login {
+    color: white;
+    padding-top: 2px;
+    margin-left: 100px;
+}
+
+.login:link,
+.login:visited{
+    font-weight: 400;
+}
+
+.login:hover,
+.login:active{
+    text-shadow: 0.15em 0.15em 0.2em #ffff00;
+    border-bottom: 1px solid transparent;
+    transition: text-shadow 0.3s;
+}
+
+nav{
+    position: relative;
+    height : 10vh;
+    background-color: #000;
+}
+
+nav div{
+    float:right;
+}
+
+nav:first-child{
+    padding-right: 100px;
+}
+
+nav div a{
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-right : 40px;
+    margin-top: 30px;
+}
+
+nav div a:link,
+nav div a:visited{
+    color: #fff;
+    border-bottom : 1px solid transparent;
+}
+
+nav div a:hover,
+nav div a:active{
+    border-bottom : 1px solid yellow;
+	transition: border-bottom 0.3s;
+}
+
+/*---------------------    footer  -------------------------------*/
+footer {
+    height : 10vh;
+    font-size: 12px;
+    background-color: #495057;
+    color: whitesmoke;
+    padding-top: 15px;
+}
+
+/*--------------------- members  -------------------------------*/
+
+section {
+    margin: 20px auto;
+    max-width: 1140px;
+}
+
+/* 인물있는곳에 배경색을 칠할까말까 */
+
+.member {
+    background-color: white; 
+    font-size: 15px;    
+    margin-bottom: 20px;
+    padding: 3%;
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+}
+
+.member h3 {
+    font-size: 50px;
+}
+
+.member > div {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.member img {
+    float: left;
+    width: 15%;
+    height: auto;
+}
+
+.info,
+.career {
+    padding-top: 30px;
+}
+
+.info {
+    float: left;
+    padding-left: 5%;
+}
+
+.info li{
+    padding-bottom: 5px;
+    list-style: circle;
+}
+
+.career {
+    float: right;
+    padding-right: 5%;
+}
+
+.info li:first-child{
+    padding-top: 2px;
+    font-weight: bold;
+}
+
+.career li:first-child{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+/*--------------------- research  -------------------------------*/
+
+.research {
+    background-color: white; 
+    overflow: hidden;
+    display: inline-block;
+    width: 25%;
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-left: 6%;
+    margin-top: 20px;
+    height: 510px;
+}
+
+.research h3{
+    text-align: left;
+    height: 55px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+}
+
+.research:first-child h3{
+    height: 45px;
+    padding-top: 24px;
+    padding-bottom: 0px;
+}
+
+.research img{
+    width: 96%;
+}
+
+.research ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: left;
+    font-size: 15px;
+    list-style: circle;
+}
+
+/*---------------------   notice   -------------------------------*/
+.notice {
+    border-top: 2px solid black;
+    background-color: white;
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+    padding : 3%;
+    padding-bottom: 7%;
+}
+
+.notice table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notice tr {
+    border-top : 1px solid rgba(0,0,0,0.5);
+}
+
+.notice th {
+    padding: 20px 0;
+}
+
+.notice td {
+    padding: 15px 0;
+}
+
+.notice tbody td {
+    text-align: center;
+}
+
+.notice tbody td:nth-child(2){
+    width: 50%;
+    text-align: left;
+    padding-left: 2%; 
+}
+
+.notice tbody td:nth-child(2) a:hover{
+    color: gray;
+}
+
+.notice a button {
+    float: right;
+    border: none;
+    width: 10%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    background: #f0e23c;
+    margin-top: 2%;
+    margin-right: 2%;
+}
+
+/*--------------------- notice_insert  -------------------------------*/
+.notice_insert{
+    height: 100vh;
+}
+
+.notice_insert input,
+.notice_insert textarea{
+    display: block;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 3%;
+    font-size: 15px; 
+    margin: 20px 0;
+}
+
+.notice_insert input:first-child{
+    width: 65%;
+    height: 40px;
+}
+
+.notice_insert textarea{
+    width: 100%;
+    height: 500px;
+    padding-top: 3%;
+}
+
+.notice_insert input:last-child{
+    padding: 0;
+    border: none;
+    width: 10%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 15px;
+    background: #f0e23c;
+}
+
+/*--------------------- notice_id  -------------------------------*/
+.notice_id {
+    background: white;
+    box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.2);
+    padding : 3%;
+}
+
+.notice_id h2 {
+    margin: 10px 0 30px 0;
+    margin-left: 3%;
+}
+
+.notice_id > p:nth-child(2) {
+    margin-left: 3%;
+    font-weight: bold;
+}
+
+.notice_id > p:nth-child(2) span{
+    float: right;
+    margin-right: 3%;
+    color : gray;
+}
+
+.notice_id > p:nth-child(3) {
+    clear: right;
+    margin: 0 3%;
+    text-align: justify;
+    margin-top: 30px;
+    min-height: 500px;
+}
+
+.notice_id > div {
+    font-size: 15px;
+    border : 1px solid rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    padding: 3%;
+    border-radius: 5px; 
+}
+
+.notice_id h3 {
+    margin-bottom : 1%;
+}
+
+.notice_id .comment {
+    padding: 1%;
+    border-bottom : 1px solid darkgray;
+    width: 100%;
+    overflow: hidden;
+}
+
+.notice_id .comment p{
+    margin-bottom: 3px;
+    max-width: 95%;
+    word-wrap: break-word;
+}
+
+.notice_id .comment p:first-child{
+    color: lightgray;
+    font-size: 12px;
+}
+
+.notice_id .comment p:first-child:first-line{
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+}
+
+.notice_id button {
+    float: right;
+    border: none;
+    width: 5%;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    background: #f0e23c;
+}
+
+.notice_id input[type=text]{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.notice_id .write_reply{
+    height: 10px;
+    padding: 1%;
+}
+
+.notice_id .write_reply:focus{
+    border-bottom: 1px solid blue;
+}
+
+.notice_id .write_comment {
+    height: 30px;
+    margin-top: 20px;
+}
+
+.notice_id .write_comment:focus{
+    border-bottom: 1px solid blue;
+    padding: 1%;
+}
+
+.notice_id input[type=submit]{
+    color: dodgerblue;
+    margin-top : 10px;
+    font-size: 13px;
+    text-align: center;
+    border: none;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.notice_id input[type=submit]:hover{
+    background: darkgray;
+    color: white;
+}
+/*--------------------- animations -------------------------------*/
+
+@keyframes change-images {
+    0%{
+        background-image: url(../img/background1.jpg);
+        background-attachment: fixed;
+    }
+    33.3%{
+        background-image: url(../img/background2.jpg);
+        background-attachment: fixed;
+    }
+    66.6%{
+        background-image: url(../img/background3.jpg); 
+        background-attachment: fixed;
+    }
+    100%{
+        background-image: url(../img/background1.jpg);
+        background-attachment: fixed;
+    }
+    
+}
+
+@keyframes change-text{
+    0%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

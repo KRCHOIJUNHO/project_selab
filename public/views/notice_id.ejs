@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" rel="text/css" href="../resources/css/style.css">
+        <title>notice</title>
+    </head>
+    <body>
+        <nav>
+            <h1 class="logo"><a href="/">LAB(<span class="color">SE</span>);</a></h1>
+            <div>
+                <a href="/notice">notice</a>
+                <a href="/members">members</a>
+                <a href="/research">research</a>
+                <a href="#">publications</a>
+                <a href="#">courses</a>
+                <% if(logined) { %>
+                    <a class="login"><%= user_name %> 님</a>
+                <% } else { %>
+                    <a href="login" class="login">login</a>
+                <% } %>   
+            </div>
+        </nav>
+        <section class="notice_id">
+            <% var date = JSON.stringify(results[0].date);
+               date = date.substring(1,11).split("-"); %>
+            <h2><%= results[0].title %></h2>
+            <p>
+                <%= results[0].writer_name %>
+                <span><%= `${date[0]}/${date[1]}/${date[2]}` %></span>
+            </p>
+            <p>
+                <%= results[0].content %>
+            </p>
+            <div>
+                <form>
+                    <h3>댓글</h3>
+                    <% for(var i=0; i<5; i++){ %>
+                    <div class="comment">
+                        <p>
+                            최준호<br>
+                            2019 11 11
+                        </p>
+                        <button type="button">답글</button>
+                        <p>asjdnfkjanskdjf</p>
+                        <input class="write_reply" type="text">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <% } %>
+                    <input class="write_comment" type="text" placeholder="write a comment">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
